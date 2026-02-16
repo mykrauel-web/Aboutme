@@ -1,0 +1,1 @@
+// Component moved to inline HTML.

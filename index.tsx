@@ -1,0 +1,1 @@
+// Empty file. Deployment is now handled by the standalone index.html for GitHub Pages compatibility.

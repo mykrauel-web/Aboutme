@@ -1,0 +1,1 @@
+// Deprecated React entry point. Application moved to pure HTML5/JS.
