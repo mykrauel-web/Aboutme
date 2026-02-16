@@ -1,11 +1,499 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myli Krauel | AI Strategy & Precision Finance</title>
+    <meta name="description" content="Portfolio of Myli Krauel: Bridging financial precision with AI-driven analytical solutions." />
+    
+    <!-- Custom Favicon (Inline SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23F43F5E%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-size=%2260%22 font-weight=%22bold%22 fill=%22white%22>M</text></svg>">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --rose-500: #F43F5E;
+            --rose-200: #FECDD3;
+            --rose-50: #FFF1F2;
+        }
 
-  <h1>Built with AI Studio</h2>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFDFD;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+        .text-gradient {
+            background: linear-gradient(135deg, #E11D48 0%, #FB7185 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(251, 113, 133, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(251, 113, 133, 0.1);
+        }
 
-</div>
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: pulse-soft 10s infinite ease-in-out;
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 0.3; transform: scale(1) translate(0, 0); }
+            50% { opacity: 0.5; transform: scale(1.1) translate(20px, -20px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .animate-float {
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .tech-badge {
+            font-family: monospace;
+            letter-spacing: 0.1em;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FFFDFD; }
+        ::-webkit-scrollbar-thumb { background: #FEE2E2; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FB7185; }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="blob w-[800px] h-[800px] bg-rose-100 top-[-20%] right-[-10%]"></div>
+        <div class="blob w-[600px] h-[600px] bg-amber-50 bottom-[-10%] left-[-10%]" style="animation-delay: -2s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-10 h-10 bg-rose-500 rounded-2xl rotate-3 group-hover:rotate-12 transition-transform flex items-center justify-center font-bold text-white shadow-lg shadow-rose-200">M</div>
+                <span class="font-bold text-2xl tracking-tighter text-slate-800">MYLI <span class="text-rose-500">KRAUEL</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#profile" class="text-slate-500 hover:text-rose-500 transition-colors text-xs font-bold uppercase tracking-widest">Profile</a>
+                <a href="#skills" class="text-slate-500 hover:text-rose-500 transition-colors text-xs font-bold uppercase tracking-widest">Capabilities</a>
+                <a href="#experience" class="text-slate-500 hover:text-rose-500 transition-colors text-xs font-bold uppercase tracking-widest">History</a>
+                <a href="#contact" class="px-7 py-3 bg-rose-500 text-white rounded-full text-sm font-bold shadow-lg shadow-rose-200 hover:bg-rose-600 transition-all duration-300 active:scale-95">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center pt-24">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-12">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-rose-600 text-[10px] font-bold tracking-[0.2em] uppercase tech-badge">
+                        Precision in Data. Strategy in Intelligence.
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight text-slate-900">
+                        High Fidelity <span class="text-gradient">Data</span>.<br />
+                        High Stakes <span class="italic font-serif font-normal text-rose-500">Strategy</span>.
+                    </h1>
+                    
+                    <p class="text-xl text-slate-500 max-w-lg leading-relaxed font-medium">
+                        Bridging high-fidelity financial integrity with the frontier of AI. I build the data foundations that elite organizations depend on.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#contact" class="px-10 py-5 bg-rose-500 text-white rounded-2xl font-bold text-lg hover:bg-rose-600 transition-all shadow-xl shadow-rose-200 active:scale-95">
+                            Secure Talent
+                        </a>
+                        <a href="#experience" class="px-10 py-5 bg-white text-rose-500 rounded-2xl font-bold text-lg hover:bg-rose-50 transition-all border border-rose-100 shadow-sm active:scale-95">
+                            View Trajectory
+                        </a>
+                    </div>
+
+                    <div class="flex items-center space-x-12 pt-4">
+                        <div class="flex flex-col">
+                            <span class="text-4xl font-bold text-slate-900 tracking-tighter">4.0</span>
+                            <span class="text-[10px] uppercase tracking-widest text-rose-400 font-bold">GPA Distinction</span>
+                        </div>
+                        <div class="w-px h-12 bg-rose-100"></div>
+                        <div class="flex flex-col">
+                            <span class="text-4xl font-bold text-slate-900 tracking-tighter">AI/ML</span>
+                            <span class="text-[10px] uppercase tracking-widest text-rose-400 font-bold">Native Implementation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center items-center">
+                    <div class="relative w-80 h-80 md:w-[550px] md:h-[550px]">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-200/30 via-pink-100/10 to-transparent rounded-full blur-[120px]"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-80 h-80 border-4 border-rose-200/40 rounded-[48px] animate-float rotate-6 relative bg-white/10 backdrop-blur-sm shadow-2xl">
+                                <div class="absolute inset-0 border border-rose-100/30 m-6 rounded-[36px]"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                   <div class="grid grid-cols-4 gap-6 p-10 opacity-60">
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.2s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.4s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.1s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.6s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.3s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.5s"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-100"></div>
+                                     <div class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" style="animation-delay: 0.7s"></div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-10 right-0 p-6 glass-card rounded-3xl text-[11px] font-bold text-rose-600 space-y-2 animate-bounce shadow-2xl tech-badge">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2 h-2 bg-rose-500 rounded-full"></span>
+                                <span>MODEL_ACCURACY_STABLE</span>
+                            </div>
+                            <div class="text-slate-500 font-medium">99.99% FIDELITY</div>
+                        </div>
+                        <div class="absolute bottom-16 left-[-20px] p-7 glass-card rounded-[40px] text-[12px] text-slate-600 space-y-2 shadow-2xl border-rose-200/20 tech-badge">
+                            <div class="text-rose-500 font-black tracking-widest">DATA_INTEGRITY_OS</div>
+                            <div class="font-medium opacity-70">ENCRYPTED_FIN_MODEL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="py-32 scroll-reveal">
+            <div class="grid md:grid-cols-12 gap-20 items-center">
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-[70px] overflow-hidden border-8 border-white shadow-2xl shadow-rose-100/50">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Myli Krauel" class="w-full h-full object-cover grayscale brightness-110 hover:grayscale-0 transition-all duration-1000" />
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 glass-card p-10 rounded-[50px] max-w-xs border border-rose-200 shadow-2xl">
+                        <p class="italic text-slate-600 text-lg leading-relaxed font-serif">
+                            "Accuracy is not a choice; it's the baseline for intelligence."
+                        </p>
+                        <div class="mt-4 font-bold text-[10px] uppercase tracking-widest text-rose-500">&mdash; Myli Krauel</div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 space-y-10">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-rose-500">
+                            <span class="w-16 h-0.5 bg-rose-500"></span>
+                            <span class="font-bold uppercase tracking-[0.4em] text-xs">The Narrative</span>
+                        </div>
+                        <h2 class="text-5xl md:text-6xl font-bold text-slate-900 leading-tight">
+                            Precision is <span class="text-rose-500 italic font-serif font-normal">Everything</span>.
+                        </h2>
+                    </div>
+                    <div class="space-y-8 text-slate-500 text-xl leading-relaxed">
+                        <p>My career is built on a <span class="text-slate-900 font-bold decoration-rose-300 decoration-4 underline-offset-4 underline">4.0 GPA in Accounting and Finance</span>—a standard of excellence that I carry into every technical challenge.</p>
+                        <p>I bridge the gap between high-level financial modeling and the frontier of AI application. I treat data as a strategic asset—verifiable, clean, and architected for scale.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6">
+                        <div class="p-8 glass-card rounded-[40px] border-rose-100 shadow-sm hover:border-rose-300 transition-colors">
+                            <div class="text-rose-500 text-[10px] font-black mb-3 tracking-[0.2em] uppercase tech-badge">Vision</div>
+                            <div class="text-slate-800 font-bold text-lg leading-snug">Engineering high-fidelity datasets for financial AI systems.</div>
+                        </div>
+                        <div class="p-8 glass-card rounded-[40px] border-rose-100 shadow-sm hover:border-rose-300 transition-colors">
+                            <div class="text-rose-500 text-[10px] font-black mb-3 tracking-[0.2em] uppercase tech-badge">Ethos</div>
+                            <div class="text-slate-800 font-bold text-lg leading-snug">Data integrity in, strategic dominance out.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-32 scroll-reveal">
+            <div class="text-center max-w-4xl mx-auto space-y-8 mb-20">
+                <h2 class="text-5xl md:text-6xl font-bold text-slate-900">Technical Intelligence</h2>
+                <p class="text-slate-500 text-xl font-medium">A dual-threat capability set combining deep analytical rigor with cutting-edge synthesis systems.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass-card p-14 rounded-[60px] border-rose-50 hover:shadow-2xl transition-all duration-500">
+                    <h3 class="text-4xl font-bold text-slate-900 flex items-center gap-5 mb-12">
+                        <span class="w-12 h-12 rounded-2xl bg-rose-500 flex items-center justify-center text-white text-lg font-bold shadow-lg shadow-rose-200">01</span>
+                        Financial
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6">
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-300"></div>
+                            <span>Cost Accounting</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-300"></div>
+                            <span>Financial Modeling</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-300"></div>
+                            <span>Forecasting</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-300"></div>
+                            <span>Auditing & GAAP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-14 rounded-[60px] border-rose-100 bg-rose-50/20 hover:shadow-2xl transition-all duration-500">
+                    <h3 class="text-4xl font-bold text-slate-900 flex items-center gap-5 mb-12">
+                        <span class="w-12 h-12 rounded-2xl bg-rose-500 flex items-center justify-center text-white text-lg font-bold shadow-lg shadow-rose-200">02</span>
+                        Intelligence
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6">
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <span>Prompt Engineering</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <span>Data Fine-Tuning</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <span>NLP Strategy</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-slate-700 font-semibold">
+                            <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+                            <span>Automation Ops</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-32 scroll-reveal">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-rose-100 pb-12 mb-20">
+                <div class="space-y-4">
+                    <span class="text-rose-500 font-black text-xs uppercase tracking-[0.4em] tech-badge">The Trajectory</span>
+                    <h2 class="text-6xl font-bold text-slate-900">Career History</h2>
+                </div>
+                <p class="text-slate-400 font-medium md:max-w-xs mt-6 md:mt-0">Tracing the path of precision and growth.</p>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="glass-card p-12 rounded-[50px] group hover:border-rose-400 transition-all duration-700">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
+                        <div>
+                            <div class="font-bold text-slate-900 text-3xl mb-2">Studio Shodwe</div>
+                            <div class="text-rose-500 font-black text-xs uppercase tracking-widest tech-badge">Strategic AI Architecture</div>
+                        </div>
+                        <time class="font-bold text-[11px] text-white bg-slate-900 px-5 py-2 rounded-full uppercase tracking-widest tech-badge self-start lg:self-center">2023 — Present</time>
+                    </div>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-8 font-medium max-w-4xl">
+                        Revolutionized content lifecycles by integrating custom AI workflows. Engineered high-fidelity prompts that maintained strict brand-voice consistency and factual accuracy across enterprise datasets.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-rose-50 px-4 py-2 rounded-xl">AI Integration</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-rose-50 px-4 py-2 rounded-xl">Workflow Automation</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-[50px] group hover:border-rose-400 transition-all duration-700">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
+                        <div>
+                            <div class="font-bold text-slate-900 text-3xl mb-2">Financial Analyst</div>
+                            <div class="text-rose-500 font-black text-xs uppercase tracking-widest tech-badge">Quantitative Modeling</div>
+                        </div>
+                        <time class="font-bold text-[11px] text-slate-400 border border-slate-200 px-5 py-2 rounded-full uppercase tracking-widest tech-badge self-start lg:self-center">2022 — 2023</time>
+                    </div>
+                    <p class="text-slate-500 text-lg leading-relaxed font-medium max-w-4xl">
+                        Developed and verified financial models for multi-million dollar portfolios. Conducted forensic data audits to ensure integrity before transition into machine learning environments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-32 scroll-reveal">
+            <div class="glass-card p-16 rounded-[70px] relative overflow-hidden border-rose-100 bg-white/50">
+                <div class="grid md:grid-cols-2 gap-20 items-center relative z-10">
+                    <div class="space-y-12">
+                        <div class="inline-block p-8 bg-white rounded-[40px] border border-rose-100 shadow-2xl shadow-rose-100/30">
+                            <div class="text-7xl font-black text-rose-500 tracking-tighter">4.0 GPA</div>
+                            <div class="text-[10px] uppercase tracking-widest font-black text-slate-400 mt-4 tech-badge">The Academic Gold Standard</div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <h2 class="text-5xl font-bold text-slate-900">Academic Honors</h2>
+                            <p class="text-slate-500 text-xl leading-relaxed font-medium">
+                                Mastery of Finance and Accounting at Palm Beach Atlantic University with absolute precision.
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-center gap-6">
+                            <div class="w-20 h-20 rounded-[30px] bg-rose-500 flex items-center justify-center shadow-xl shadow-rose-200 text-white font-bold text-3xl">P</div>
+                            <div>
+                                <div class="font-bold text-3xl text-slate-900">PBA University</div>
+                                <div class="text-rose-500 font-bold uppercase tracking-[0.2em] text-xs mt-1">B.S. Accounting & Finance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="relative w-72 h-72">
+                            <div class="absolute inset-0 border-[16px] border-rose-100 rounded-full"></div>
+                            <div class="absolute inset-0 border-[16px] border-rose-500 rounded-full" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);"></div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-8xl font-black text-slate-900 tracking-tighter">4.0</span>
+                                <span class="text-[10px] uppercase tracking-[0.4em] text-rose-500 font-black">Summa Distinction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 scroll-reveal">
+            <div class="grid lg:grid-cols-2 gap-24">
+                <div class="space-y-12">
+                    <div class="space-y-6">
+                        <span class="text-rose-500 font-black text-xs uppercase tracking-[0.4em] tech-badge">The Partnership</span>
+                        <h2 class="text-7xl font-extrabold tracking-tight text-slate-900">Initiate <span class="text-rose-500 italic font-serif font-normal">Contact</span>.</h2>
+                    </div>
+                    <p class="text-2xl text-slate-500 font-medium leading-relaxed">Ready to integrate quantitative precision and AI strategy into your high-stakes objectives?</p>
+                    
+                    <div class="space-y-10 pt-8">
+                        <a href="mailto:m.rauel@pba.edu" class="flex items-center space-x-8 group">
+                            <div class="w-16 h-16 glass-card rounded-[28px] flex items-center justify-center text-rose-500 group-hover:bg-rose-500 group-hover:text-white transition-all duration-300 shadow-xl">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-black tech-badge mb-1">Direct Email</div>
+                                <div class="text-slate-900 font-bold text-2xl group-hover:text-rose-500 transition-colors">m.rauel@pba.edu</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://linkedin.com" target="_blank" class="flex items-center space-x-8 group">
+                            <div class="w-16 h-16 glass-card rounded-[28px] flex items-center justify-center text-rose-500 group-hover:bg-rose-500 group-hover:text-white transition-all duration-300 shadow-xl">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-widest font-black tech-badge mb-1">Network</div>
+                                <div class="text-slate-900 font-bold text-2xl group-hover:text-rose-500 transition-colors">LinkedIn Profile</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="glass-card p-12 md:p-16 rounded-[60px] space-y-10 border-rose-100 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rotate-45 translate-x-16 -translate-y-16"></div>
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="space-y-4">
+                            <label class="text-[10px] font-black text-rose-500 uppercase tracking-[0.3em] tech-badge">Your Identity</label>
+                            <input type="text" name="name" required class="w-full bg-white border border-rose-100 rounded-2xl px-7 py-5 text-slate-800 focus:outline-none focus:ring-4 focus:ring-rose-100 focus:border-rose-400 transition-all font-medium" placeholder="Full Name" />
+                        </div>
+                        <div class="space-y-4">
+                            <label class="text-[10px] font-black text-rose-500 uppercase tracking-[0.3em] tech-badge">Email Access</label>
+                            <input type="email" name="email" required class="w-full bg-white border border-rose-100 rounded-2xl px-7 py-5 text-slate-800 focus:outline-none focus:ring-4 focus:ring-rose-100 focus:border-rose-400 transition-all font-medium" placeholder="email@example.com" />
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="text-[10px] font-black text-rose-500 uppercase tracking-[0.3em] tech-badge">The Objective</label>
+                        <textarea name="message" required rows="5" class="w-full bg-white border border-rose-100 rounded-2xl px-7 py-5 text-slate-800 focus:outline-none focus:ring-4 focus:ring-rose-100 focus:border-rose-400 transition-all font-medium resize-none" placeholder="Describe the mission..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-6 bg-rose-500 text-white font-black uppercase tracking-[0.3em] text-xs rounded-2xl hover:bg-rose-600 transition-all shadow-xl shadow-rose-200 active:scale-[0.98]">Send Transmission</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-rose-100 bg-white/40 backdrop-blur-md relative z-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-3 mb-8">
+                <div class="w-10 h-10 bg-rose-500 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">M</div>
+                <span class="font-bold text-2xl tracking-tighter text-slate-800">MYLI <span class="text-rose-500 text-slate-800">KRAUEL</span></span>
+            </div>
+            <p class="text-slate-400 text-xs font-bold uppercase tracking-[0.5em] mb-6">High Fidelity &bull; Absolute Precision &bull; AI Strategy</p>
+            <div class="w-20 h-0.5 bg-rose-100 mx-auto mb-10"></div>
+            <p class="text-slate-300 text-[10px] font-medium tracking-widest uppercase">© <span id="year"></span> Myli Krauel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 60) {
+                nav.classList.add('bg-white/90', 'backdrop-blur-2xl', 'border-b', 'border-rose-100/50', 'py-4', 'shadow-sm');
+                nav.classList.remove('py-8');
+            } else {
+                nav.classList.remove('bg-white/90', 'backdrop-blur-2xl', 'border-b', 'border-rose-100/50', 'py-4', 'shadow-sm');
+                nav.classList.add('py-8');
+            }
+        });
+
+        // Scroll Reveal Animation with Intersection Observer
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Form Handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const name = formData.get('name');
+            const message = formData.get('message');
+            // Basic UI feedback
+            const btn = e.target.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'TRANSMITTING...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                window.location.href = `mailto:m.rauel@pba.edu?subject=Partnership Inquiry: ${name}&body=${message}`;
+                btn.textContent = 'SUCCESS';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            }, 800);
+        });
+    </script>
+</body>
+</html>
